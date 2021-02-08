@@ -1,0 +1,31 @@
+extends layout
+
+block content
+    h1= title
+    .w3-container.w3-sand.w3-margin.w3-border
+      form.w3-container(action="/addCompras" method="POST" enctype="text")
+        p
+        label.w3-bold ID
+        input.w3-input.w3-border(name="_id" type="text" )
+        p      
+        label.w3-bold Team
+        input.w3-input.w3-border(name="team" type="text" )
+        p      
+        label.w3-bold Pitch1
+        input.w3-input.w3-border(name="pitch1" type="text" )
+        p      
+        label.w3-bold Pitch2
+        input.w3-input.w3-border(name="pitch2" type="text" )
+        p      
+        label.w3-bold techPitch
+        input.w3-input.w3-border(name="techPitch" type="text" )
+        p      
+        label.w3-bold businessReport
+        input.w3-input.w3-border(name="businessReport" type="text" )
+        p      
+        label.w3-bold techReport
+        input.w3-input.w3-border(name="techReport" type="text" )
+        
+        .w3-padding
+          button.w3-btn.w3-deep-orange.w3-round-xxlarge.w3-margin( type="submit") Enviar
+

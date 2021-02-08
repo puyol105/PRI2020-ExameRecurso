@@ -1,0 +1,36 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+  .w3-container.w3-deep-orange.w3-center
+        a.w3-btn.w3-hover-orange.w3-sand.w3-round-xxlarge.w3-margin(href='/addTeamsForm') Adicionar
+  if dados.length > 0
+    .w3-container.w3-padding
+      table.w3-table-all.w3-card-4.w3-hoverable(id='myTable')
+        tr.w3-orange
+          th ID
+          th Team
+          th Pitch1
+          th Pitch2
+          th techPitch
+          th businessReport
+          th techReport
+          th nmembers
+        each t in dados
+          
+          tr
+            td #{t._id}
+            td
+              a(href='/api/teams/'+t._id)= t.team
+            td #{t.pitch1}
+            td #{t.pitch2}
+            td #{t.techPitch}
+            td #{t.businessReport}
+            td #{t.techReport}
+            td #{t.nmembers}
+            td 
+              a(href='/remover/'+t._id) Remover
+  else
+    .w3-container
+      p There are no teams...
