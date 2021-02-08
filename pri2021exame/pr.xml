@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pr>
+    <meta>
+        <key>PRI2020-exame</key>
+        <title>Exame de PRI</title>
+        <bdate>8 Fevereiro</bdate>
+        <edate>8 Fevereiro</edate>
+        <supervisor>José Carlos Ramalho</supervisor>
+    </meta>
+    <workteam>
+        <worker num="a75310">
+            <name>Renato Cruzinha</name>
+            <email>a75310@alunos.uminho.pt</email>
+        </worker>
+    </workteam>
+    <abstract>
+        <paragrafo>Pergunta 1</paragrafo>
+        <paragrafo>Import do dataset, depois de analisado, ele tá bom. Tinho o cluster online no atlas a correr o mongo, </paragrafo>usando a interface gráfica
+        <paragrafo>dei upload do ficheiro.</paragrafo>
+        <paragrafo>mongoimport -d PEI2020 -c teams --jsonArray team.json</paragrafo>
+    
+    
+        <paragrafo>Pergunta 2a</paragrafo>
+        <paragrafo>db.teams.count()</paragrafo>  
+        <paragrafo>Pergunta 2b</paragrafo>
+        <paragrafo>db.teams.distinct("team").sort()</paragrafo>
+        <paragrafo>Pergunta 2c</paragrafo>
+        <paragrafo>db.teams.find().count()</paragrafo>
+    </abstract>
+</pr>
