@@ -23,4 +23,11 @@ router.get('/api/teams/:id', function (req, res) {
         .catch(e => res.render('error', { error: e }))
 });
 
+router.get('/remover/:id', function (req, res) {
+    var idTeam = req.params.id;
+    Team.eliminar(idTeam)
+        .then(() => res.redirect('/'))
+        .catch(e => res.render('error', { error: e }))
+});
+
 module.exports = router;
